@@ -95,11 +95,11 @@ prompt_time() {
   prompt_segment_right white black '%D{%H:%M:%S} '
 }
 
-prompt_rvm() {
-  local rvm_prompt
-  rvm_prompt=`rvm-prompt`
-  if [ "$rvm_prompt" != "" ]; then
-    prompt_segment_right "240" white "$rvm_prompt "
+prompt_nvm() {
+  local nvm_prompt
+  nvm_prompt=`nvm current`
+  if [ "$nvm_prompt" != "" ]; then
+    prompt_segment_right "240" white "$nvm_prompt "
   fi
 }
 
@@ -171,8 +171,8 @@ function git_time_since_commit() {
 }
 
 build_rprompt() {
-  if [ "$ZSH_2000_DISABLE_RVM" != 'true' ];then
-    prompt_rvm
+  if [ "$ZSH_2000_DISABLE_NVM" != 'true' ];then
+    prompt_nvm
   fi
   prompt_time
 }
@@ -180,5 +180,5 @@ build_rprompt() {
 
 PROMPT='%{%f%b%k%}$(build_prompt) '
 if [ "$ZSH_2000_DISABLE_RIGHT_PROMPT" != 'true' ];then
-  RPROMPT='%{%f%b%k%}$(git_time_since_commit)$(build_rprompt)'
+  RPROMPT='%{%f%b%k%}$(build_rprompt)'
 fi

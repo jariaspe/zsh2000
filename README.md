@@ -1,11 +1,9 @@
 ZSH2000
 ======
 
-![alt tag](https://raw.githubusercontent.com/maverick9000/zsh2000/master/demo.png)
+![alt tag](https://raw.githubusercontent.com/jariaspe/zsh2000/master/demo.png)
 
-![alt tag](https://raw.githubusercontent.com/maverick9000/zsh2000/master/demo2.png)
-
-Powerline looking zsh theme with rvm prompt, git status and branch, current time, user, hostname, pwd, exit status, root and background job status.
+Powerline looking zsh theme with nvm prompt, git status and branch, current time, user, hostname, pwd, exit status, root and background job status.
 
 Influenced heavily by [agnoster's theme](https://gist.github.com/3712874) and [jeremyFreeAgent's theme](https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme)
 
@@ -16,7 +14,7 @@ Install your favorite version of
 
 ### Installation
 
-    git clone https://github.com/maverick9000/zsh2000.git
+    git clone https://github.com/jariaspe/zsh2000.git
     ln -s zsh2000.zsh-theme ~/.oh-my-zsh/themes/zsh2000.zsh-theme
 
 Modify ~/.zshrc setting
@@ -51,6 +49,6 @@ Disable git status on top of plain git clean/dirty
 
     export ZSH_2000_DISABLE_GIT_STATUS='true'
 
-Disable RVM prompt
+Disable NVM prompt
 
-    export ZSH_2000_DISABLE_RVM='true'
+    export ZSH_2000_DISABLE_NVM='true'
